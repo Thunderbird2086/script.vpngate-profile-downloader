@@ -1,2 +1,3 @@
-# script.vpngate.profile.downloader
-VPN Profile downloader for Kodi
+VPN Profile Downloader for kodi
+==========
+A script that downloads OpenVPN profiles from vpngate
