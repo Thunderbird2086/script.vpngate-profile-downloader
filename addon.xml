@@ -22,7 +22,10 @@
     <assets>
       <icon>resources/icon.png</icon>
       <fanart></fanart>
-      <screenshot></screenshot>
+      <screenshot>resources/images/screenshot000.png</screenshot>
+      <screenshot>resources/images/screenshot001.png</screenshot>
+      <screenshot>resources/images/screenshot002.png</screenshot>
+      <screenshot>resources/images/screenshot003.png</screenshot>
     </assets>
     <news>v0.0.2 (2019-05-06)
 - Add filters
