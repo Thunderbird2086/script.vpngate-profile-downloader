@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+  <category label="3000">
+    <setting label="3001" type="lsep"/>
+    <setting id="countries" type="text"   label="3002" default="US"/>
+    <setting id="speed"     type="number" label="3003" default="0"/>
+  </category>
+</settings>
