@@ -1,21 +1,27 @@
 # -*- coding: utf-8 -*
 # Auther: Theunderbird2086
-# Module: default
+# Module: addon
 
 import xbmcaddon
 import xbmcgui
  
-import downloader
+from resources.lib.const import FILTER_COUNTRY, FILTER_SPEED
+import resources.lib.downloader as downloader
 
 _ADDON       = xbmcaddon.Addon()
-_ADDONNAME   = addon.getAddonInfo('name')
+_ADDONNAME   = _ADDON.getAddonInfo('name')
  
-_DEFAULT_FILTER = ['KR', 'US']
 
 
 if __name__ == '__main__':
-    _no_of_files = downloader.get(_DEFAULT_FILTER)
+    
+    filters = {
+      FILTER_COUNTRY: _ADDON.getSetting(FILTER_COUNTRY),
+      FILTER_SPEED: int(_ADDON.getSetting(FILTER_SPEED))
+    }
+            
+    no_of_files = downloader.get(filters)
 
-    msg = "Downloaded {} profiles.".format(_no_of_files)
+    msg = "Downloaded {} profiles.".format(no_of_files)
  
     xbmcgui.Dialog().ok(_ADDONNAME, msg)

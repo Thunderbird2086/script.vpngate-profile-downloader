@@ -1,9 +1,12 @@
 # -*-coding: utf-8 -*-
+# Auther: Theunderbird2086
 
 import base64
 import csv
 import os
 import sys
+
+from const import FILTER_COUNTRY, FILTER_SPEED
 
 def url_req2x(url):
     import urllib2
@@ -74,9 +77,13 @@ def get_dump_dir():
 
     return dump_dir
 
-def dump_profile(dump_dir, csv_dict, idx):
+def dump_profile(dump_dir, csv_dict, idx, min_speed):
+    speed = int(int(csv_dict['Speed'][idx])/1024/1024)
+    if min_speed != 0 and speed < min_speed:
+        return False
+
     o_name = 'vpngate'
-    o_name += '_{:03d}M'.format(int(int(csv_dict['Speed'][idx])/1024/1024))
+    o_name += '_{:03d}M'.format(speed)
     o_name += '_' + csv_dict['CountryShort'][idx]
     o_name += '_' + csv_dict['HostName'][idx]
 
@@ -95,26 +102,35 @@ def dump_profile(dump_dir, csv_dict, idx):
     with open(o_path, 'w') as fo:
         fo.write(conf)
 
-    return o_name
+    return True
 
 def get(filter):
     profiles = download_profile()
 
     csv_dict = get_dict(profiles.splitlines()[1:-1])
 
+    filter_countries = [cn.strip() for cn in filter[FILTER_COUNTRY].split(',')]
+
     index = []
     for idx, country in enumerate(csv_dict['CountryShort']):
-        if country not in filter:
+        if filter_countries and country not in filter_countries:
             continue
         index.append(idx)    
 
     dump_dir = get_dump_dir()
+    min_speed = filter[FILTER_SPEED]
+    cnt = 0
     for idx in index:
-        dump_profile(dump_dir, csv_dict, idx)
+        if dump_profile(dump_dir, csv_dict, idx, min_speed):
+            cnt += 1
 
-    return len(index)
+    return cnt
 
 if __name__ == "__main__":
-    no_of_files = get(['KR', 'US'])
+    filter = {
+      FILTER_COUNTRY: "KR, US",
+      FILTER_SPEED: 50
+    }
+    no_of_files = get(filter)
 
     print("dumped {} profiles".format(no_of_files))
