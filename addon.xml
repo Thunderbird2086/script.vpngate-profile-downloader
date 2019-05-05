@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.vpngate.profile.downloader"
+       name="VPNGate Profile Downloader"
+       version="0.0.1"
+       provider-name="thunderbird2086">
+  <requires>
+    <import addon="xbmc.python"
+            version="2.26.0"/>
+  </requires>
+  <extension point="xbmc.python.script"
+             library="addon.py"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">OpenVPN profile downloader for Kodi.</summary>
+    <description lang="en_GB">This addon allows you to download VPN profiles from https://www.vpngate.net/en/</description>
+    <disclaimer lang="en_GB">Feel free to use this script.</disclaimer>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+    <forum></forum>
+    <website>http://github.com/Thunderbird2086/script.vpngate.profile.downloader</website>
+    <email></email>
+    <source>https://github.com/Thunderbird2086/script.vpngate.profile.downloader</source>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart></fanart>
+      <screenshot></screenshot>
+    </assets>
+    <news>v0.0.1 (2019-05-05)
+- Initial release
+    </news>
+  </extension>
+</addon>
