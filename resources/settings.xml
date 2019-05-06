@@ -5,4 +5,8 @@
     <setting id="countries" type="text"   label="3002" default="US"/>
     <setting id="speed"     type="number" label="3003" default="0"/>
   </category>
+  <category label="4000">
+    <setting label="4001" type="lsep"/>
+    <setting id="storage"   type="folder" label="4002" default="home://VPN"/>
+  </category>
 </settings>

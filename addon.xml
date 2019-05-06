@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="script.vpngate.profile.downloader"
        name="VPNGate Profile Downloader"
-       version="0.0.2"
+       version="0.0.3"
        provider-name="thunderbird2086">
   <requires>
     <import addon="xbmc.python"
@@ -17,7 +17,7 @@
     <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
     <forum></forum>
     <website>http://github.com/Thunderbird2086/script.vpngate.profile.downloader</website>
-    <email></email>
+    <email>37539914+Thunderbird2086@users.noreply.github.com</email>
     <source>https://github.com/Thunderbird2086/script.vpngate.profile.downloader</source>
     <assets>
       <icon>resources/icon.png</icon>
