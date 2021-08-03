@@ -1,0 +1,43 @@
+# script.vpngate.profile.downloader language file
+msgid ""
+msgstr ""
+"Project-Id-Version: script.vpngate.profile.downloader\n"
+"Report-Msgid-Bugs-To: https://github.com/Thunderbird2086/script.vpngate-profile-downloader\n"
+"POT-Creation-Date: 2021-08-03 13:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+msgctxt "#3000"
+msgid "VPNGate Profile"
+msgstr ""
+
+msgctxt "#3001"
+msgid "Profile Filters"
+msgstr ""
+
+msgctxt "#3002"
+msgid "Countries(comma separated)"
+msgstr ""
+
+msgctxt "#3003"
+msgid "Min. Speed(0 for wildcard)"
+msgstr ""
+
+
+msgctxt "#4000"
+msgid "Misc."
+msgstr ""
+
+msgctxt "#4001"
+msgid "Profile folder"
+msgstr ""
+
+msgctxt "#4002"
+msgid "Download to"
+msgstr ""

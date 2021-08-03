@@ -9,7 +9,7 @@ import csv
 import os
 import sys
 
-from const import FILTER_COUNTRY, FILTER_SPEED, PROFILE_URL
+from .const import FILTER_COUNTRY, FILTER_SPEED, PROFILE_URL
 
 def url_req2x(url):
     """URL request for python 2.x

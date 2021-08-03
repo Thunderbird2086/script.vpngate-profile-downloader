@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="script.vpngate.profile.downloader"
        name="VPNGate Profile Downloader"
-       version="0.0.3"
+       version="1.0.0"
        provider-name="thunderbird2086">
   <requires>
     <import addon="xbmc.python"
-            version="2.26.0"/>
+            version="3.0.0"/>
   </requires>
   <extension point="xbmc.python.script"
              library="addon.py"/>
@@ -27,7 +27,13 @@
       <screenshot>resources/images/screenshot002.png</screenshot>
       <screenshot>resources/images/screenshot003.png</screenshot>
     </assets>
-    <news>v0.0.2 (2019-05-06)
+    <news>v1.0.0 (2021-08-03)
+- Matrix
+
+v0.0.3 (2019-05-06)
+- Added download directory to Settings
+
+v0.0.2 (2019-05-06)
 - Add filters
 
 v0.0.1 (2019-05-05)
